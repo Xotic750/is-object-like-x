@@ -40,15 +40,17 @@ primitive and not a function.
 
 **Example**  
 ```js
-_.isObjectLike({});
+var isObjectLike = require('is-object-like-x');
+
+isObjectLike({});
 // => true
 
-_.isObjectLike([1, 2, 3]);
+isObjectLike([1, 2, 3]);
 // => true
 
-_.isObjectLike(_.noop);
+isObjectLike(_.noop);
 // => false
 
-_.isObjectLike(null);
+isObjectLike(null);
 // => false
 ```
