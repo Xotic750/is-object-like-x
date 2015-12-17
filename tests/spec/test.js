@@ -6,7 +6,7 @@
   es3:true, esnext:true, plusplus:true, maxparams:2, maxdepth:1,
   maxstatements:9, maxcomplexity:2 */
 
-/*global expect, module, require, describe, it, returnExports */
+/*global JSON:true, expect, module, require, describe, it, returnExports */
 
 (function () {
   'use strict';
@@ -15,6 +15,12 @@
     isObjectLike;
   if (typeof module === 'object' && module.exports) {
     require('es5-shim');
+    require('es5-shim/es5-sham');
+    if (typeof JSON === 'undefined') {
+      JSON = {};
+    }
+    require('json3').runInContext(null, JSON);
+    require('es6-shim');
     isObjectLike = require('../../index.js');
   } else {
     isObjectLike = returnExports;
