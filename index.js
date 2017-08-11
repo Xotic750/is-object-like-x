@@ -1,6 +1,6 @@
 /**
  * @file Determine if a value is object like.
- * @version 1.3.0
+ * @version 1.4.0
  * @author Xotic750 <Xotic750@gmail.com>
  * @copyright  Xotic750
  * @license {@link <https://opensource.org/licenses/MIT> MIT}
@@ -34,5 +34,5 @@ var isPrimitive = require('is-primitive');
  * // => false
  */
 module.exports = function isObjectLike(value) {
-  return isPrimitive(value) === false && isFunction(value) === false;
+  return isPrimitive(value) === false && isFunction(value, true) === false;
 };
