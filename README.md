@@ -21,38 +21,30 @@
 <a name="module_is-object-like-x"></a>
 
 ## is-object-like-x
+
 Determine if a value is object like.
 
-**Version**: 1.7.1  
-**Author**: Xotic750 <Xotic750@gmail.com>  
-**License**: [MIT](&lt;https://opensource.org/licenses/MIT&gt;)  
-**Copyright**: Xotic750  
 <a name="exp_module_is-object-like-x--module.exports"></a>
 
 ### `module.exports(value)` ⇒ <code>boolean</code> ⏏
+
 Checks if `value` is object-like. A value is object-like if it's not a
 primitive and not a function.
 
 **Kind**: Exported function  
-**Returns**: <code>boolean</code> - Returns `true` if `value` is object-like, else `false`.  
+**Returns**: <code>boolean</code> - Returns `true` if `value` is object-like, else `false`.
 
-| Param | Type | Description |
-| --- | --- | --- |
+| Param | Type            | Description         |
+| ----- | --------------- | ------------------- |
 | value | <code>\*</code> | The value to check. |
 
-**Example**  
+**Example**
+
 ```js
-var isObjectLike = require('is-object-like-x');
+import isObjectLike from 'is-object-like-x';
 
-isObjectLike({});
-// => true
-
-isObjectLike([1, 2, 3]);
-// => true
-
-isObjectLike(_.noop);
-// => false
-
-isObjectLike(null);
-// => false
+console.log(isObjectLike({})); // => true
+console.log(isObjectLike([1, 2, 3])); // => true
+console.log(isObjectLike(_.noop)); // => false
+console.log(isObjectLike(null)); // => false
 ```
