@@ -8,6 +8,8 @@ import isPrimitive from 'is-primitive';
  * @param {*} [value] - The value to check.
  * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
  */
-export default function isObjectLike(value) {
+const isObjectLike = function isObjectLike(value) {
   return isPrimitive(value) === false && isFunction(value, true) === false;
-}
+};
+
+export default isObjectLike;

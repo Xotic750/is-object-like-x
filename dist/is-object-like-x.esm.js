@@ -8,8 +8,10 @@ import isPrimitive from 'is-primitive';
  * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
  */
 
-export default function isObjectLike(value) {
+var isObjectLike = function isObjectLike(value) {
   return isPrimitive(value) === false && isFunction(value, true) === false;
-}
+};
+
+export default isObjectLike;
 
 //# sourceMappingURL=is-object-like-x.esm.js.map
