@@ -2,13 +2,13 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2015-present",
-  "date": "2019-07-18T18:38:05.401Z",
+  "date": "2019-07-19T21:47:18.298Z",
   "describe": "",
   "description": "Determine if a value is object like.",
   "file": "is-object-like-x.js",
   "hash": "a64e28c96f75effa7913",
   "license": "MIT",
-  "version": "2.0.15"
+  "version": "2.0.16"
 }
 */
 (function webpackUniversalModuleDefinition(root, factory) {
