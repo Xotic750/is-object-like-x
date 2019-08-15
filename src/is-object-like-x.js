@@ -1,5 +1,5 @@
 import isFunction from 'is-function-x';
-import isPrimitive from 'is-primitive';
+import isPrimitive from 'is-primitive-x';
 
 /**
  * Checks if `value` is object-like. A value is object-like if it's not a

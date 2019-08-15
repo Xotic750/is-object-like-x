@@ -2,11 +2,11 @@
 {
   "author": "Graham Fairweather",
   "copywrite": "Copyright (c) 2015-present",
-  "date": "2019-08-15T18:02:33.761Z",
+  "date": "2019-08-15T18:42:12.381Z",
   "describe": "",
   "description": "Determine if a value is object like.",
   "file": "is-object-like-x.js",
-  "hash": "ff5ccc6b83099a4951a9",
+  "hash": "7d65dcc56cec52e2377b",
   "license": "MIT",
   "version": "2.1.0"
 }
@@ -1018,6 +1018,22 @@ var is_function_x_esm_isFunction = function isFunction(value, allowClass) {
 /* harmony default export */ var is_function_x_esm = (is_function_x_esm_isFunction);
 
 
+// CONCATENATED MODULE: ./node_modules/is-primitive-x/dist/is-primitive-x.esm.js
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+/**
+ * Returns true if the value is a primitive.
+ *
+ * @param {*} [val] - The value to test.
+ * @returns {boolean} True if a primitive, otherwise false..
+ */
+var isPrimitive = function isPrimitive(val) {
+  return _typeof(val) === 'object' ? val === null : typeof val !== 'function';
+};
+
+/* harmony default export */ var is_primitive_x_esm = (isPrimitive);
+
+
 // CONCATENATED MODULE: ./dist/is-object-like-x.esm.js
 
 
@@ -1030,7 +1046,7 @@ var is_function_x_esm_isFunction = function isFunction(value, allowClass) {
  */
 
 var is_object_like_x_esm_isObjectLike = function isObjectLike(value) {
-  return is_primitive_default()(value) === false && is_function_x_esm(value, true) === false;
+  return is_primitive_x_esm(value) === false && is_function_x_esm(value, true) === false;
 };
 
 /* harmony default export */ var is_object_like_x_esm = __webpack_exports__["default"] = (is_object_like_x_esm_isObjectLike);
